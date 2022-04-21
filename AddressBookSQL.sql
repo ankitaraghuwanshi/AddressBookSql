@@ -29,3 +29,7 @@ Update Address_Book_Table
 set Email='AnitaYadav@gmail.com'
 where FirstName='Anita'
 
+------ UC 5: Ability to Delete Contact Person Based on their Name ------
+delete 
+from Address_Book_Table
+where FirstName='Anita' and SecondName='Yadav'
