@@ -44,3 +44,10 @@ values('Seena','Verma','22 korol Street','Hosur','Maharastra',2545001,957575050,
 select Count(*),state,City
 from Address_Book_Table
 Group by state,City
+
+------ UC 8: Ability to retrieve entries sorted alphabetically ------
+select *
+from Address_Book_Table
+where City='Bangalore'
+order by(FirstName)
+
