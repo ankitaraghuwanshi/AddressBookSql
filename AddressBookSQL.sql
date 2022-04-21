@@ -37,3 +37,10 @@ where FirstName='Anita' and SecondName='Yadav'
 ------ UC 6: Ability to Retrieve Person belonging to a City or State ------
 select * from Address_Book_Table
 where City='Indore' or State='MP'
+
+------ UC 7: Ability to Retrieve Count of Person belonging to a City or State ------
+Insert into Address_Book_Table(FirstName,SecondName,Address,City,State,zip,PhoneNumber,Email) 
+values('Seena','Verma','22 korol Street','Hosur','Maharastra',2545001,957575050,'Seena@gmail.com')
+select Count(*),state,City
+from Address_Book_Table
+Group by state,City
