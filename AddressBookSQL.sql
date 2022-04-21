@@ -20,3 +20,12 @@ Insert into Address_Book_Table(FirstName,SecondName,Address,City,State,zip,Phone
 values('Ankita','Raghuwanshi','Tade colony','Indore','MP',243001,9454545454,'bittan@gmail.com'),
 ('Ruju','Mathialagan','836 Heritage Rd','Chennai','Tamil Nadu',134002,98402000,'Ruju@gmail.com'),
 ('Anita','Yadav','19 Augusta Avenue','Lucknow','Uttar Pradesh',113201,87210505053,'anita@gmail.com');
+
+select * from Address_Book_Table
+
+------ UC 4: Ability to Edit Contact Person Based on their Name ------
+--Edit Email based on Name--
+Update Address_Book_Table
+set Email='AnitaYadav@gmail.com'
+where FirstName='Anita'
+
