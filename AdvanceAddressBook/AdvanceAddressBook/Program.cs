@@ -11,7 +11,11 @@ namespace AdvanceAddressBook
             ContactDetails contactDetails = new ContactDetails();
             addressBookManager.ReadData(contactDetails);
             addressBookManager.InsertIntoTable(contactDetails);
+            Console.WriteLine("Contact inserted");
             addressBookManager.EditContactDetail(contactDetails.FirstName, contactDetails.PhoneNumber);
+            Console.WriteLine("Contact Updated");
+            addressBookManager.DeletetheRecord(contactDetails.FirstName);
+            Console.WriteLine("Contact deleted");
 
 
 
