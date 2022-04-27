@@ -6,8 +6,13 @@ namespace AdvanceAddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("welcome to address book db");    
+            Console.WriteLine("welcome to address book db");
+            AddressBookManager addressBookManager = new AddressBookManager();
+            ContactDetails contactDetails = new ContactDetails();
+            addressBookManager.ReadData(contactDetails);
+            addressBookManager.InsertIntoTable(contactDetails);
             
+
 
         }
     }

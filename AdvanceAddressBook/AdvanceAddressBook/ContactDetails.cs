@@ -8,7 +8,7 @@ namespace AdvanceAddressBook
 {
     class ContactDetails
     {
-        public int personId { get; set; }
+       
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string Address { get; set; }
