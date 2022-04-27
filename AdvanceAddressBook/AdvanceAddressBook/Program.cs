@@ -11,7 +11,8 @@ namespace AdvanceAddressBook
             ContactDetails contactDetails = new ContactDetails();
             addressBookManager.ReadData(contactDetails);
             addressBookManager.InsertIntoTable(contactDetails);
-            
+            addressBookManager.EditContactDetail(contactDetails.FirstName, contactDetails.PhoneNumber);
+
 
 
         }

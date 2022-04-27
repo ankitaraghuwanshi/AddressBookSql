@@ -1,4 +1,4 @@
-Create Procedure InsertingIntoAddressBook
+Create or ALTER Procedure InsertingIntoAddressBook
 (
   @FirstName varchar(200),
   @SecondName varchar(200),

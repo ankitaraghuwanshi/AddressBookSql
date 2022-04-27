@@ -64,9 +64,38 @@ namespace AdvanceAddressBook
 
             return contactDetails;
         }
+        public int EditContactDetail(string FirstName, long PhoneNumber)
+        {
+            using (sqlConnection)
+                try
+                {
+                    SqlConnection sqlConnection = new SqlConnection(connectionString);
+                    SqlCommand sqlCommand = new SqlCommand("dbo.EditPhoneNumber", sqlConnection);
+
+                    sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    sqlConnection.Open();
+
+                    sqlCommand.Parameters.AddWithValue("@FirstName", FirstName);
+                    sqlCommand.Parameters.AddWithValue("@PhoneNumber", PhoneNumber);
+                    
+                    int result = sqlCommand.ExecuteNonQuery();
+
+                    if (result > 0)
+                        return 1;
+                    else
+                        return 0;
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+                finally
+                {
+                    sqlConnection.Close();
+                }
+        }
     }
-}
-     
+}    
     
 
 
